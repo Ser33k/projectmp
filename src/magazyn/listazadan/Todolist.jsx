@@ -1,42 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import "./todoliststyle.css";
 import logo from "/public/img/logo.jpg";
+import { Helmet } from "react-helmet";
+//import components
+import Formtodo from "./components/Form";
+import List from "./components/List";
 
 export const Zgloszenia = () => {
-  return (
-    <div className="container">
-      <div id="header">
-        <div className="main-logo">
-          <a id="logo" href="/">
-            <img className="logo" src={logo} alt="logo" />
-          </a>
-        </div>
-      </div>
-      <h1 className="tekstup">Lista niezgodności</h1>
-      <form className="form">
-        <input
-          type="text"
-          className="todo-input"
-          placeholder="Tutaj dodaj niezgodność"
-        />
-        <button className="todo-button" type="submit">
-          <i className="fas fa-plus-square"></i>
-        </button>
+  const [inputText, setInputText] = useState("");
 
-        <div className="select">
-          <select name="todos" className="filter-todo">
-            <option value="all">Wszystkie</option>
-            <option value="completed">Zrobione</option>
-            <option value="uncompleted">Nie zrobione</option>
-          </select>
+  return (
+    <>
+      <Helmet>
+        <title>Lista zadań</title>
+      </Helmet>
+      <div className="container">
+        <div id="header">
+          <div className="main-logo">
+            <a id="logo-main" href="/">
+              <img className="logo-main" src={logo} alt="logo" />
+            </a>
+          </div>
         </div>
-      </form>
-      <div className="todo-container">
-        <ul className="todo-list"></ul>
+        <h1 className="tekstup">Lista zadań do wykonania</h1>
+        <Formtodo setInputText={setInputText} />
+        <List />
+        <footer>
+          <p className="autor-main">Made by - Mateusz Trochimowicz</p>
+        </footer>
       </div>
-      <footer>
-        <p className="autor-main">Made by - Mateusz Trochimowicz</p>
-      </footer>
-    </div>
+    </>
   );
 };

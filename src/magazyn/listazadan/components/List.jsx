@@ -1,7 +1,7 @@
 import React from "react";
 
 const List = () => {
-  retunr(
+  return (
     <div className="todo-cointainer">
       <ul className="todo-list"></ul>
     </div>
