@@ -90,7 +90,7 @@
   display: inline-block;
   transition: transform 0.3s ease-out;
 }
-.logo:hover {
+.logo-main:hover {
   transform: scale(1.2);
 }
 
