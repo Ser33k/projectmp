@@ -13,7 +13,7 @@ export const Zgloszenia = () => {
         </div>
       </div>
       <h1 className="tekstup">Lista niezgodności</h1>
-      <form>
+      <form className="form">
         <input
           type="text"
           className="todo-input"
@@ -35,7 +35,7 @@ export const Zgloszenia = () => {
         <ul className="todo-list"></ul>
       </div>
       <footer>
-        <p className="autor">Made by - Mateusz Trochimowicz</p>
+        <p className="autor-main">Made by - Mateusz Trochimowicz</p>
       </footer>
     </div>
   );

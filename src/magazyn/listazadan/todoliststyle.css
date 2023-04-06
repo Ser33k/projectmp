@@ -1,45 +1,25 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css");
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
 @font-face {
   font-family: "Poppins", sans-serif;
   src: url(../../public/fonts/Poppins-Regular.ttf) format("truetype");
 }
-body {
-  background-image: linear-gradient(#1b3060, #565e72);
-  color: white;
-  font-family: "Poppins", sans-serif;
-  min-height: 100vh;
-}
-header {
-  font-size: 2rem;
-}
 
-header,
-form {
+.form {
   min-height: 20vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-form input,
-form button {
+.todo-input,
+.todo-button {
   padding: 0.5rem;
   font-size: 2rem;
   border: none;
   background: white;
 }
-form button {
-  color: #05163f;
-  background: #f7fffe;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin-right: 0.5rem;
-}
-form button:hover {
+
+.form .todo-button:hover {
   background: #1b3060;
   color: white;
 }
@@ -107,7 +87,7 @@ form button:hover {
   padding: 1rem;
 }
 /*CUSTOM SELECTOR */
-select {
+.filter-todo {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -116,6 +96,10 @@ select {
   box-shadow: none;
   border: 0;
   background: white;
+  color: #1b3060;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  width: 12rem;
 }
 
 /* Custom Select */
@@ -124,12 +108,7 @@ select {
   position: relative;
   overflow: hidden;
 }
-select {
-  color: #1b3060;
-  font-family: "Poppins", sans-serif;
-  cursor: pointer;
-  width: 12rem;
-}
+
 /* Arrow */
 .select::after {
   content: "\25BC";
@@ -148,19 +127,9 @@ select {
   text-align: center;
   height: auto;
   width: auto;
+  font-size: 2rem;
 }
-footer {
-  width: 100%;
-  height: auto;
-  background-color: whitesmoke;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  flex-direction: row-reverse;
-  margin-top: auto;
-  position: fixed;
-  bottom: 0;
-}
+
 .logo {
   min-height: 1px;
   width: 200px;
@@ -177,50 +146,16 @@ footer {
   margin-top: 1px;
   width: auto;
 }
-p {
-  font-weight: normal;
-  font-size: 100%;
-  padding: 0;
-  margin: 0;
-  margin-right: 1%;
-  font-family: "Aboreto";
-}
+
 .container {
   height: 100%;
+  background-image: linear-gradient(#1b3060, #565e72);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
 }
 
 .todo-list {
   overflow: hidden;
   max-height: 400px;
-}
-
-@media (max-width: 1200px) {
-  .container {
-    flex-direction: column;
-    align-items: center;
-  }
-  form {
-    width: 90%;
-    margin: 10px auto;
-  }
-  .btn {
-    margin: 10px auto;
-  }
-  .tasks {
-    width: 100%;
-    margin: 0;
-  }
-  .todo-input {
-    width: 100%;
-  }
-}
-
-@media (max-width: 600px) {
-  .form {
-    width: 100%;
-    margin: 10px auto;
-  }
-  .todo-input {
-    width: 100%;
-  }
 }

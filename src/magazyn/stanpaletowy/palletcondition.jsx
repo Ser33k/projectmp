@@ -38,12 +38,10 @@ export const StanPaletowy = () => {
     setPaletyWydane(Number(paletyWczoraj) + Number(przyjete) - Number(result));
   };
 
-  //brak zera na początku
-
   return (
     <>
       <Helmet>
-        <title>Stan Paletowy</title>
+        <title>Stan paletowy</title>
       </Helmet>
       <div id="header">
         <div className="main-logo">
@@ -55,15 +53,18 @@ export const StanPaletowy = () => {
       <div className="box-conatiner">
         <div className="box box1">
           <div className="content">
-            <h1>Oblicz ilość palet</h1>
+            <h1 className="text-pallet">Oblicz ilość palet</h1>
             <div className="tytul2">
-              <p>Wpisz dane aby wykonać obliczenie</p>
+              <p className="mintext-pallet">
+                Wpisz dane aby wykonać obliczenie
+              </p>
             </div>
             <form>
               <div className="free">
-                <p>Ile jest wolnych miejsc?</p>
+                <p className="mintext-pallet">Ile jest wolnych miejsc?</p>
               </div>
               <input
+                className="input-pallet"
                 type="number"
                 min="0"
                 id="free"
@@ -75,9 +76,12 @@ export const StanPaletowy = () => {
                 }
               />
               <div className="rawmaterial">
-                <p>Ile palet jest na bufor / II hala / rampa?</p>
+                <p className="mintext-pallet">
+                  Ile palet jest na bufor / II hala / rampa?
+                </p>
               </div>
               <input
+                className="input-pallet"
                 type="number"
                 min="0"
                 id="rawmaterial"
@@ -89,9 +93,10 @@ export const StanPaletowy = () => {
                 }
               />
               <div className="Andersa">
-                <p>Ile palet jest na Andersa?</p>
+                <p className="mintext-pallet">Ile palet jest na Andersa?</p>
               </div>
               <input
+                className="input-pallet"
                 type="number"
                 min="0"
                 id="andersa"
@@ -103,9 +108,12 @@ export const StanPaletowy = () => {
                 }
               />
               <div className="finished_product ">
-                <p>Ile palet jest wyrobu gotowego?</p>
+                <p className="mintext-pallet">
+                  Ile palet jest wyrobu gotowego?
+                </p>
               </div>
               <input
+                className="input-pallet"
                 type="number"
                 min="0"
                 id="finished_product"
@@ -129,8 +137,10 @@ export const StanPaletowy = () => {
         </div>
         <div className="box box2">
           <div className="content">
-            <h1>Suma palet na Magazynie</h1>
-            <p>Poniżej jest wynik łącznej ilości palet surowca</p>
+            <h1 className="text-pallet">Suma palet na Magazynie</h1>
+            <p className="mintext-pallet">
+              Poniżej jest wynik łącznej ilości palet surowca
+            </p>
             <div className="result" id="result">
               {result}
             </div>
@@ -147,11 +157,14 @@ export const StanPaletowy = () => {
 
         <div className="box box3">
           <div className="content">
-            <h1>Ilość palet wydanych</h1>
+            <h1 className="text-pallet">Ilość palet wydanych</h1>
             <div className="yesterday">
-              <p>Ile palet łącznie było poprzedniego dnia ?</p>
+              <p className="mintext-pallet">
+                Ile palet łącznie było poprzedniego dnia ?
+              </p>
             </div>
             <input
+              className="input-pallet"
               min="0"
               type="number"
               id="yesterday"
@@ -163,9 +176,12 @@ export const StanPaletowy = () => {
               }
             />
             <div className="delivery_yesterday">
-              <p>Ile palet przyjętych z poprzedniego dnia ?</p>
+              <p className="mintext-pallet">
+                Ile palet przyjętych z poprzedniego dnia ?
+              </p>
             </div>
             <input
+              className="input-pallet"
               min="0"
               type="number"
               id="delivery_yesterday"
@@ -176,7 +192,9 @@ export const StanPaletowy = () => {
                 (e.key === "-" || e.key === "+") && e.preventDefault()
               }
             />
-            <p>Poniżej jest wynik ilości palet wydanych </p>
+            <p className="mintext-pallet">
+              Poniżej jest wynik ilości palet wydanych{" "}
+            </p>
             <div className="result" id="result_spent">
               {paletyWydane}
             </div>
@@ -193,7 +211,7 @@ export const StanPaletowy = () => {
       </div>
 
       <footer>
-        <p className="autor">Made by - Mateusz Trochimowicz</p>
+        <p className="autor-main">Made by - Mateusz Trochimowicz</p>
       </footer>
     </>
   );
