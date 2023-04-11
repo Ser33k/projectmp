@@ -8,7 +8,7 @@ import List from "./components/List";
 
 export const Zgloszenia = () => {
   const [inputText, setInputText] = useState("");
-
+  const [todos, setTodos] = useState([]);
   return (
     <>
       <Helmet>
@@ -23,7 +23,12 @@ export const Zgloszenia = () => {
           </div>
         </div>
         <h1 className="tekstup">Lista zadań do wykonania</h1>
-        <Formtodo setInputText={setInputText} />
+        <Formtodo
+          inputText={inputText}
+          todos={todos}
+          setTodos={setTodos}
+          setInputText={setInputText}
+        />
         <List />
         <footer>
           <p className="autor-main">Made by - Mateusz Trochimowicz</p>
