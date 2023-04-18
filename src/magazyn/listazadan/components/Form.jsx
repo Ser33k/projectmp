@@ -38,7 +38,6 @@ const Formtodo = ({ setInputText, todos, setTodos, inputText }) => {
           </select>
         </div>
       </form>
-      ;
     </>
   );
 };

@@ -29,7 +29,7 @@ export const Zgloszenia = () => {
           setTodos={setTodos}
           setInputText={setInputText}
         />
-        <List />
+        <List setTodos={setTodos} todos={todos} />
         <footer>
           <p className="autor-main">Made by - Mateusz Trochimowicz</p>
         </footer>
