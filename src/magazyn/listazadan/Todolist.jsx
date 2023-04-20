@@ -9,6 +9,21 @@ import List from "./components/List";
 export const Zgloszenia = () => {
   const [inputText, setInputText] = useState("");
   const [todos, setTodos] = useState([]);
+  const [status, setStatus] = useState(`all`);
+  const [filteredTodos, setFilteredTodos] = useState([]);
+  const filterHandler = () => {
+    switch (status) {
+      case `completed`:
+        setFilteredTodos(todos.filter((todo) => todo.completed === true));
+        break;
+      case `uncompleted`:
+        setFilteredTodos(todos.filter((todo) => todo.completed === false));
+        break;
+      default:
+        setFilteredTodos(todos);
+        break;
+    }
+  };
   return (
     <>
       <Helmet>
@@ -28,6 +43,7 @@ export const Zgloszenia = () => {
           todos={todos}
           setTodos={setTodos}
           setInputText={setInputText}
+          setStatus={setStatus}
         />
         <List setTodos={setTodos} todos={todos} />
         <footer>
