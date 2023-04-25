@@ -13,7 +13,7 @@ const Formtodo = ({ setInputText, todos, setTodos, inputText, setStatus }) => {
     setInputText("");
   };
   const statusHandler = (e) => {
-    setStatus(e.target.vaule);
+    setStatus(e.target.value);
   };
   return (
     <>

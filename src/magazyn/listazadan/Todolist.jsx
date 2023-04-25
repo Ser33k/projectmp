@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./todoliststyle.css";
 import logo from "/public/img/logo.jpg";
 import { Helmet } from "react-helmet";
@@ -9,8 +9,13 @@ import List from "./components/List";
 export const Zgloszenia = () => {
   const [inputText, setInputText] = useState("");
   const [todos, setTodos] = useState([]);
-  const [status, setStatus] = useState(`all`);
+  const [status, setStatus] = useState("all");
   const [filteredTodos, setFilteredTodos] = useState([]);
+
+  useEffect(() => {
+    filterHandler();
+  }, [todos, status]);
+
   const filterHandler = () => {
     switch (status) {
       case `completed`:
@@ -45,7 +50,7 @@ export const Zgloszenia = () => {
           setInputText={setInputText}
           setStatus={setStatus}
         />
-        <List setTodos={setTodos} todos={todos} />
+        <List filteredTodos={filteredTodos} setTodos={setTodos} todos={todos} />
         <footer>
           <p className="autor-main">Made by - Mateusz Trochimowicz</p>
         </footer>
