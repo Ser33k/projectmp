@@ -31,9 +31,22 @@
   font-size: 5vh;
   font-weight: 600;
 }
+.todo-item {
+  white-space: normal;
+  word-wrap: break-word;
+}
 .todo-list {
-  min-width: 30%;
+  margin: 0 auto;
+  min-width: 200px;
+  max-width: 50%;
   list-style: none;
+  overflow-y: auto;
+  height: 50vh;
+  overflow: auto;
+  overflow-y: auto;
+}
+.todo-item {
+  overflow: auto;
 }
 .todo-button {
   margin-left: 5px;
@@ -141,9 +154,4 @@
   color: white;
   font-family: "Poppins", sans-serif;
   min-height: 100vh;
-}
-
-.todo-list {
-  overflow: hidden;
-  max-height: 400px;
 }

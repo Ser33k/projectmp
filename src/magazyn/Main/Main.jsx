@@ -21,7 +21,7 @@ export const Main = () => {
               <a href="/tablica"></a>
             </li>
             <li className="slide s3">
-              <a href="/Dostawy/Dostawy.html"></a>
+              <a href="/kanban"></a>
             </li>
             <li className="slide s4">
               <a href="/zgloszenia"></a>
