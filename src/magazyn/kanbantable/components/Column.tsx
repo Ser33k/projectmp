@@ -14,10 +14,10 @@ import Task from "./Task";
 import React from "react";
 
 const ColumnColorScheme: Record<ColumnType, string> = {
-  Todo: "gray",
-  "In Progress": "blue",
-  Blocked: "red",
-  Completed: "green",
+  "Do zrobienia": "gray",
+  "W trakcie": "blue",
+  Zablokowane: "red",
+  Ukończone: "green",
 };
 
 function Column({ column }: { column: ColumnType }) {
